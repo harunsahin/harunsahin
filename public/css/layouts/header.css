@@ -1,0 +1,16 @@
+.header {
+    padding: var(--spacing-md);
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-menu {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+@media (max-width: var(--mobile)) {
+    .nav-menu {
+        flex-direction: column;
+    }
+} 

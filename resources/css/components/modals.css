@@ -1,0 +1,260 @@
+/* Modern modal stilleri */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050 !important;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(33, 37, 41, 0.75);
+    backdrop-filter: blur(4px);
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 1.75rem auto;
+    pointer-events: none;
+    transform: translateY(-50px);
+    transition: transform var(--transition-normal);
+    z-index: 1051 !important;
+    max-width: 800px;
+}
+
+.modal.show .modal-dialog {
+    transform: translateY(0);
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 25px rgba(0,0,0,0.1);
+    outline: 0;
+    z-index: 1052 !important;
+}
+
+.modal-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--gray-800);
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+/* Özel modal boyutları */
+.search-modal .modal-dialog {
+    max-width: 700px;
+}
+
+.view-modal .modal-dialog {
+    max-width: 800px;
+}
+
+.offer-modal .modal-dialog {
+    max-width: 900px;
+}
+
+/* Modal içi tablo stilleri */
+.modal .table {
+    margin: 0;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.modal .table th {
+    background: var(--gray-100);
+    font-weight: 600;
+    color: var(--gray-800);
+}
+
+.modal .table td {
+    vertical-align: middle;
+}
+
+/* Modal form stilleri */
+.modal .form-control {
+    background: #fff;
+    border-radius: 0.25rem;
+}
+
+.modal .form-floating > label {
+    padding: 0.75rem;
+}
+
+/* Modal butonları */
+.modal .btn {
+    padding: 0.5rem 1.25rem;
+    font-weight: 500;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-normal);
+}
+
+.modal .btn-primary {
+    background: var(--primary-color);
+    border: none;
+}
+
+.modal .btn-primary:hover {
+    background: var(--secondary-color);
+    transform: translateY(-1px);
+}
+
+/* Modal boyutları */
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 500px;
+        margin: 1.75rem auto;
+    }
+    
+    .modal-dialog-scrollable {
+        height: calc(100% - 3.5rem);
+    }
+
+    .modal-dialog-centered {
+        min-height: calc(100% - 3.5rem);
+    }
+
+    .modal-sm {
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-lg,
+    .modal-xl {
+        max-width: 800px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .modal-xl {
+        max-width: 1140px;
+    }
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040 !important;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.5 !important;
+}
+
+.modal-backdrop.fade {
+    opacity: 0;
+}
+
+.modal-backdrop.show {
+    opacity: 0.5;
+}
+
+/* Modal form elemanları için özel stiller */
+.modal .form-label {
+    font-weight: 500;
+}
+
+/* Teklif oluşturma modalı için özel stiller */
+.modal.offer-modal {
+    background: rgba(33, 37, 41, 0.85);
+    backdrop-filter: blur(8px);
+}
+
+.offer-modal .modal-dialog {
+    max-width: 800px;
+}
+
+.offer-modal .modal-content {
+    border: none;
+    box-shadow: var(--shadow-lg);
+}
+
+.offer-modal .modal-header {
+    background: var(--primary-color);
+    color: white;
+    border-bottom: none;
+}
+
+.offer-modal .modal-title {
+    color: white;
+    font-weight: 600;
+}
+
+.offer-modal .modal-body {
+    padding: 2rem;
+}
+
+.offer-modal .form-floating {
+    margin-bottom: 1.25rem;
+}
+
+.offer-modal .form-control {
+    border: 2px solid var(--gray-200);
+    transition: all var(--transition-normal);
+}
+
+.offer-modal .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(67, 97, 238, 0.15);
+}
+
+.offer-modal .form-floating > label {
+    color: var(--gray-600);
+    padding: 1rem;
+}
+
+.offer-modal .form-floating > .form-control:focus ~ label,
+.offer-modal .form-floating > .form-control:not(:placeholder-shown) ~ label {
+    color: var(--primary-color);
+    background: white;
+    padding: 0 0.5rem;
+    transform: scale(.85) translateY(-1rem) translateX(.15rem);
+}
+
+/* Dosya yükleme alanı */
+.offer-modal .file-upload {
+    border: 2px dashed var(--gray-300);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+    transition: all var(--transition-normal);
+}
+
+.offer-modal .file-upload:hover {
+    border-color: var(--primary-color);
+    background: var(--gray-100);
+}
+
+/* Modal Open State */
+body.modal-open {
+    overflow: hidden;
+    padding-right: 0 !important;
+}
+
+.modal-open .wrapper {
+    filter: none !important;
+} 

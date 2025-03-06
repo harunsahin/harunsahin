@@ -1,0 +1,244 @@
+/* Z-index katmanları */
+:root {
+    --z-base: 1000;
+    --z-sidebar: 1020;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-modal-dialog: 1051;
+    --z-modal-content: 1052;
+    --z-dropdown: 1060;
+    --z-tooltip: 1070;
+}
+
+/* Sidebar Wrapper */
+.sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 260px;
+    z-index: 1030;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    background: #1e1e2d;
+    color: #fff;
+    transition: width 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Header */
+.sidebar-header {
+    padding: 1.5rem;
+    background: rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-brand {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* User Section */
+.sidebar-user {
+    padding: 1.5rem;
+    background: rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(45deg, #2b5876, #4e4376);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+.user-role {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Navigation */
+.sidebar-nav {
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+.nav-title {
+    padding: 1.2rem 1.5rem 0.5rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.4);
+    font-weight: 600;
+}
+
+.nav-link {
+    padding: 0.8rem 1.5rem;
+    color: rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+}
+
+.nav-link.active {
+    color: #fff;
+    background: linear-gradient(118deg, #7367f0, #9e95f5);
+}
+
+.nav-link i {
+    width: 20px;
+    margin-right: 0.75rem;
+    font-size: 1.1rem;
+}
+
+/* Collapse Menu */
+#settingsSubmenu {
+    background: rgba(0,0,0,0.1);
+    padding: 0;
+}
+
+#settingsSubmenu .nav-link {
+    padding-left: 3.5rem;
+}
+
+/* Collapsed State */
+.sidebar-wrapper.collapsed {
+    width: 70px;
+}
+
+.sidebar-wrapper.collapsed .sidebar-brand,
+.sidebar-wrapper.collapsed .user-name,
+.sidebar-wrapper.collapsed .user-role,
+.sidebar-wrapper.collapsed .nav-link span,
+.sidebar-wrapper.collapsed .nav-title,
+.sidebar-wrapper.collapsed .fa-chevron-down,
+.sidebar-wrapper.collapsed .ms-auto,
+.sidebar-wrapper.collapsed #settingsSubmenu {
+    display: none;
+}
+
+.sidebar-wrapper.collapsed .nav-link {
+    justify-content: center;
+    padding: 1rem;
+}
+
+.sidebar-wrapper.collapsed .nav-link i {
+    margin: 0;
+}
+
+.content.expanded {
+    margin-left: 70px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar-wrapper {
+        margin-left: -260px;
+    }
+    
+    .sidebar-wrapper.show {
+        margin-left: 0;
+    }
+    
+    .content {
+        margin-left: 0;
+    }
+}
+
+/* Sidebar footer'ı kaldır */
+.sidebar-footer {
+    display: none;
+}
+
+/* Modal Styles */
+.modal-backdrop {
+    z-index: var(--z-modal-backdrop);
+}
+
+.modal {
+    z-index: var(--z-modal);
+}
+
+.modal-dialog {
+    z-index: var(--z-modal-dialog);
+}
+
+.modal-content {
+    z-index: var(--z-modal-content);
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 25px rgba(0,0,0,0.1);
+}
+
+/* Sidebar Toggle Button */
+#sidebarToggle {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: calc(var(--z-sidebar) + 1);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.sidebar-wrapper.collapsed #sidebarToggle {
+    left: 80px;
+    color: #1e1e2d;
+}
+
+/* Responsive için */
+@media (max-width: 768px) {
+    #sidebarToggle {
+        display: none;
+    }
+}
+
+/* Dropdown z-index */
+.dropdown-menu {
+    z-index: var(--z-dropdown);
+}
+
+/* Modal açıkken backdrop'un arkasında kalması için */
+.modal-open .wrapper {
+    filter: none !important;
+}
+
+/* Wrapper */
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Content Area */
+.content {
+    flex: 1;
+    min-height: 100vh;
+    margin-left: 260px;
+    padding: 1.5rem;
+    transition: margin 0.3s ease;
+    background: #fff;
+} 

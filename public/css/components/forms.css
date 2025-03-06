@@ -1,0 +1,15 @@
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-control {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+} 

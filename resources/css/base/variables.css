@@ -1,0 +1,51 @@
+:root {
+    /* Modern renk paleti */
+    --primary-color: #4361ee;
+    --secondary-color: #3f37c9;
+    --success-color: #4cc9f0;
+    --info-color: #4895ef;
+    --warning-color: #f72585;
+    --danger-color: #e63946;
+    
+    /* Nötr renkler */
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #adb5bd;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+    
+    /* Gölgeler */
+    --shadow-sm: 0 2px 4px rgba(0,0,0,.075);
+    --shadow-md: 0 4px 6px rgba(0,0,0,.1);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,.1);
+    
+    /* Border radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+    
+    /* Geçişler */
+    --transition-fast: 0.15s ease-in-out;
+    --transition-normal: 0.3s ease-in-out;
+    
+    /* Font ailesi */
+    --main-font: 'Source Sans Pro', sans-serif;
+    
+    /* Sidebar değişkenleri */
+    --sidebar-width: 250px;
+    --sidebar-collapsed-width: 70px;
+    --sidebar-bg: #343a40;
+    
+    /* Spacing */
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    
+    /* Z-index levels */
+    --z-sidebar: 1000;
+    --z-overlay: 1001;
+} 

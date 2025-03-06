@@ -1,0 +1,8 @@
+.hero-section {
+    padding: var(--spacing-lg) 0;
+    background-color: #f8f9fa;
+}
+
+.featured-products {
+    margin: var(--spacing-lg) 0;
+} 

@@ -1,0 +1,1 @@
+[{"name":"name","label":"Otel Adı","type":"string","validation":["required"]},{"name":"description","label":"Açıklama","type":"text","validation":["required"]},{"name":"price","label":"Fiyat","type":"decimal","validation":["required","numeric"]},{"name":"is_active","label":"Aktif","type":"boolean","validation":["boolean"]}]

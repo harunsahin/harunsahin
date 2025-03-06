@@ -1,0 +1,21 @@
+:root {
+    /* Renkler */
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    
+    /* Yazı tipleri */
+    --main-font: 'Arial', sans-serif;
+    --heading-font: 'Helvetica', sans-serif;
+    
+    /* Boşluklar */
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    
+    /* Breakpoints */
+    --mobile: 576px;
+    --tablet: 768px;
+    --desktop: 1024px;
+} 

@@ -1,0 +1,52 @@
+/* Table Styles */
+.table th {
+    background-color: #f8f9fa;
+}
+
+/* Form Styles */
+.form-floating > .form-control {
+    height: calc(3.5rem + 2px);
+}
+
+.form-floating > label {
+    padding: 1rem 0.75rem;
+}
+
+/* Content Area */
+.content {
+    flex: 1;
+    min-height: 100vh;
+    margin-left: 260px !important;
+    padding: 1.5rem !important;
+    transition: all 0.3s ease;
+    position: relative;
+    background: #fff;
+    width: calc(100% - 260px) !important;
+}
+
+.content.expanded {
+    margin-left: 70px !important;
+    width: calc(100% - 70px) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+}
+
+/* İçerik alanındaki elementler için z-index ayarları */
+.content > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Navbar */
+.navbar {
+    background: #fff;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+} 

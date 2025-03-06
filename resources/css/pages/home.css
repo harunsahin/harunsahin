@@ -1,0 +1,4 @@
+/* Sayfa özel stilleri buraya gelecek */
+.home-container {
+    padding: var(--spacing-lg);
+} 

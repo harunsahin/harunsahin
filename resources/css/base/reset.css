@@ -1,0 +1,51 @@
+/* Temel reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Z-index katmanları */
+:root {
+    --z-sidebar: 1030;
+    --z-content: 1;
+    --z-modal: 1050;
+    --z-dropdown: 1040;
+}
+
+/* Bootstrap override'lar */
+.btn-link {
+    text-decoration: none;
+}
+
+.nav-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Sidebar özel override'lar */
+.sidebar .nav-link,
+.sidebar .btn-link {
+    color: rgba(255,255,255,0.7);
+}
+
+.sidebar .nav-link:hover,
+.sidebar .btn-link:hover {
+    color: #fff;
+}
+
+.sidebar .nav-link.active {
+    color: #fff;
+    background: linear-gradient(118deg, #7367f0, #9e95f5);
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+} 
